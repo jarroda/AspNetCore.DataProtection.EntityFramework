@@ -1,0 +1,27 @@
+{
+  "version": "0.1.0-*",
+  "description": "EntityFramework support as key store.",
+  "packOptions": {
+    "repository": {
+      "type": "git",
+      "url": "git://github.com/jarroda/AspNetCore.DataProtection.EntityFramework"
+    },
+    "tags": [
+      "aspnetcore",
+      "dataprotection",
+      "entityframework",
+      "ef"
+    ]
+  },
+  "buildOptions": {
+    "debugType": "portable"
+  },
+  "dependencies": {
+    "Microsoft.AspNetCore.DataProtection": "1.0.0",
+    "Microsoft.EntityFrameworkCore": "1.0.0"
+  },
+  "frameworks": {
+    "net451": {},
+    "netstandard1.5": {}
+  }
+}
