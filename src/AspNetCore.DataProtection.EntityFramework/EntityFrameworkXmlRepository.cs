@@ -34,10 +34,21 @@ namespace AspNetCore.DataProtection.EntityFramework
             {
                 throw new ArgumentNullException(nameof(element));
             }
+            
+            var activation = element.Descendants("activationDate")
+                .FirstOrDefault()
+                ?.Value.ParseDate();
 
+            var expiration = element.Descendants("expirationDate")
+                .FirstOrDefault()
+                ?.Value.ParseDate();
+            
+            
             var key = new DataProtectionKey
             {
                 ApplicationScope = _applicationScope,
+                ActivationDate = activation,
+                ExpirationDate = expiration,
                 FriendlyName = friendlyName,
                 XmlData = element.ToString(),
             };

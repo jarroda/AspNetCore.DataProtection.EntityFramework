@@ -1,11 +1,11 @@
 
 using System;
+using AspNetCore.DataProtection.EntityFramework;
 using Microsoft.AspNetCore.DataProtection;
 using Microsoft.AspNetCore.DataProtection.Repositories;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.DependencyInjection;
 
-namespace AspNetCore.DataProtection.EntityFramework
+namespace Microsoft.Extensions.DependencyInjection
 {
     public static class AzureDataProtectionBuilderExtensions
     {
